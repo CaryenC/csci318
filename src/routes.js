@@ -11,9 +11,9 @@ function routes() {
         <div>
             <Router>
             <TopBar/>
-                <Route exact path="/" component={Home}></Route>
+                <Route exact path="/home" component={Home}></Route>
                 <Route path="/overview" component={Overview}></Route>
-                <Route exact path="/info-one" component={InfoOne}></Route>
+                <Route path="/info-one" component={InfoOne}></Route>
                 <Route path="/about" component={About}></Route>
             </Router>
         </div>

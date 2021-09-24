@@ -8,8 +8,8 @@ import {
     Row,
     Col,
   } from "react-bootstrap";
-import msiaCSV from '../data/msia-road.csv';
-// import jpCSV from '.../data/jp-road.csv';
+import msiaCSV from './msia-road.csv';
+import jpCSV from './jp-road.csv';
 
 const msiaSerInjury = [], misaSlInjury = [], jpSerInjury = [], jpSlInjury = [];
 var msiaTotalSerious = 0, jpTotalSerious = 0, msiaTotalSlight = 0, jpTotalSlight = 0;
@@ -90,33 +90,29 @@ function InjuryType() {
   
   return (
     <div>
-        <Container fluid>
+        <Container>
             <Row>
                 <Col sm>
                     <Card className="card-stats">
-                        <Card.Body>
-                            <Card.Title as="h4">Total Serious Injury</Card.Title>
-                            <Doughnut data={seriousTypeData} />
-                        </Card.Body>
-                        <Card.Footer>
-                            Serious and Slight Injury Comparison
-                        </Card.Footer>
+                        <Row>
+                            <Col sm>
+                                <Card.Body>
+                                    <Card.Title as="h4">Total Serious Injury</Card.Title>
+                                    <Doughnut data={seriousTypeData} />
+                                </Card.Body>
+                            </Col>
+                            <Col sm>
+                                <Card.Body>
+                                    <Card.Title as="h4">Total Slight Injury</Card.Title>
+                                    <Doughnut data={slightTypeData} />
+                                </Card.Body>
+                            </Col>
+                        </Row>
                     </Card>
                 </Col>
-                <Col sm>
-                    <Card className="card-stats">
-                    <Card.Body>
-                        <Card.Title as="h4">Total Slight Injury</Card.Title>
-                        <Doughnut data={slightTypeData} />
-                    </Card.Body>
-                    <Card.Footer>
-                        Serious and Slight Injury Comparison
-                    </Card.Footer>
-                    </Card>
-                </Col>
-              </Row>
-          </Container>
-        </div>
+            </Row>
+        </Container>
+    </div>
     )
 }
 

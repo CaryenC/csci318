@@ -35,6 +35,7 @@ function Cards() {
                     </Card>
                 </Col>
               </Row>
+              <hr/>
           </Container>
         </div>
     )

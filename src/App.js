@@ -3,6 +3,7 @@ import Routes from './routes'
 import {CircleArrow} from "react-scroll-up-button";
 
 function App() {
+
   return (
     <div className="App">
         <CircleArrow 
@@ -10,6 +11,7 @@ function App() {
           ShowAtPosition={100}
           AnimationDuration={100} />
         <Routes/>
+
     </div>
   );
 }

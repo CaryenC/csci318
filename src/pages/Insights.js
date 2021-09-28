@@ -2,7 +2,7 @@ import React from 'react'
 import Cards from '../components/Cards/Cards.js';
 import InjuryType from '../components/Charts/InjuryType.js';
 
-function Overview() {
+function Insights() {
     return (
         <div>
             <Cards/>
@@ -11,4 +11,4 @@ function Overview() {
     )
 }
 
-export default Overview
+export default Insights

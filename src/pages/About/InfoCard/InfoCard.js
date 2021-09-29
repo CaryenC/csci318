@@ -1,18 +1,16 @@
 import "./InfoCard.css";
 import React from "react";
-import { Card, Col, ListGroup } from "react-bootstrap";
+import { Card, ListGroup } from "react-bootstrap";
 
 const InfoCard = (props) => {
   const { image, name, major, responsibilities } = props.details;
 
   return (
-    <Col xs={12} md={3}>
+    <div className="divCol">
       <Card className="infoCard" style={{ border: "0px" }}>
-        <Card.Img
-          className="img-fluid rounded-circle"
-          variant="top"
-          src={image}
-        />
+        <div style={{ textAlign: "center" }}>
+          <img className="developerImage" src={image} alt="developer" />
+        </div>
 
         <div className="divCardName">
           <Card.Title>
@@ -32,7 +30,7 @@ const InfoCard = (props) => {
           ))}
         </ListGroup>
       </Card>
-    </Col>
+    </div>
   );
 };
 

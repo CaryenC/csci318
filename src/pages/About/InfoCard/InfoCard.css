@@ -7,15 +7,26 @@
 .majorDiv {
   height: 30px;
 }
+.divCol {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+}
 .majorStyle {
   color: gray;
   border-bottom: 1px solid gray;
   padding-bottom: 5px;
 }
+.developerImage {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
 /* for mobile */
 @media only screen and (max-width: 1024px) {
   .infoCard {
-    width: 70%;
+    width: 100%;
     margin-top: 15px;
   }
   .divCardName {
@@ -23,5 +34,9 @@
   }
   .majorDiv {
     height: 30px;
+  }
+  .divCol {
+    width: 100%;
+    text-align: center;
   }
 }

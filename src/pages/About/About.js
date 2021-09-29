@@ -1,7 +1,11 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import "./About.css";
+import { Container } from "react-bootstrap";
 import InfoCard from "./InfoCard/InfoCard";
 import caryen from "../../images/pictures/caryen.jpg";
+import json from "../../images/pictures/img_avatar_male.png";
+import jinny from "../../images/pictures/img_avatar_female.png";
+import azizul from "../../images/pictures/azizul.png";
 import teamLogo from "../../images/teamlogo/whitebg.png";
 
 const About = () => {
@@ -11,16 +15,18 @@ const About = () => {
       sl: 1,
       image: caryen,
       name: "Caryen Cheong Jia Xin",
-      major: "No Major",
+      major: "Software Engineering",
       responsibilities: [
-        { sl: 1, task: "One" },
-        { sl: 2, task: "Two" },
-        { sl: 3, task: "Three" },
+        { sl: 1, task: "Plan the Gantt Chart" },
+        { sl: 2, task: "Allocate job to the team" },
+        { sl: 3, task: "Conduct and lead the weekly meetings" },
+        { sl: 4, task: "Write and finalize progress and final reports" },
+        { sl: 5, task: "Update tasks in Taiga.io" },
       ],
     },
     {
       sl: 2,
-      image: "https://i.ibb.co/ngH1Pb7/photo-azizul-170-X-180.png",
+      image: azizul,
       name: "Mohammed Azizul Hoque Sheikh",
       major: "Software Engineering",
       responsibilities: [
@@ -31,7 +37,7 @@ const About = () => {
     },
     {
       sl: 3,
-      image: "https://i.ibb.co/ngH1Pb7/photo-azizul-170-X-180.png",
+      image: jinny,
       name: "Saw Zhi Ying",
       major: "No Major",
       responsibilities: [
@@ -42,7 +48,7 @@ const About = () => {
     },
     {
       sl: 4,
-      image: "https://i.ibb.co/ngH1Pb7/photo-azizul-170-X-180.png",
+      image: json,
       name: "Tan Wei De",
       major: "No Major",
       responsibilities: [
@@ -54,15 +60,17 @@ const About = () => {
   ];
 
   return (
-    <Container>
-      <img src={teamLogo} alt="" />
+    <Container style={{ width: "70%" }}>
+      {/* team logo */}
+      <img src={teamLogo} alt="avatar team logo" />
+      {/* team name */}
       <h3>AVATAR</h3>
       <br />
-      <Row>
+      <div className="rowDiv">
         {data.map((item) => (
           <InfoCard key={item.sl} details={item} />
         ))}
-      </Row>
+      </div>
     </Container>
   );
 };

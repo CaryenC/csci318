@@ -140,8 +140,6 @@ function InjuryType() {
                             <p>To:</p>
                             <input type="text" onChange={(e)=>setEndYear(e.target.value)} />
                           </Col>
-                          <p>Year starts from {startYear}.</p>
-                          <p>Year ends at {endYear}.</p>
                         </Row>
                     </Card>
                 </Col>

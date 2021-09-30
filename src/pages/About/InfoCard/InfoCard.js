@@ -21,7 +21,7 @@ const InfoCard = (props) => {
         <div className="majorDiv">
           <h6 className="majorStyle">({major})</h6>
         </div>
-
+        <br />
         <p>Responsibilities</p>
 
         <ListGroup style={{ textAlign: "left" }}>

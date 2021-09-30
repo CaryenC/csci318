@@ -16,7 +16,7 @@
 .majorStyle {
   color: gray;
   border-bottom: 1px solid gray;
-  padding-bottom: 5px;
+  height: 40px;
 }
 .developerImage {
   height: 150px;
@@ -30,10 +30,13 @@
     margin-top: 15px;
   }
   .divCardName {
-    height: 30px;
+    height: 50px;
   }
   .majorDiv {
     height: 30px;
+  }
+  .majorStyle {
+    height: 40px;
   }
   .divCol {
     width: 100%;

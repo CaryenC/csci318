@@ -1,6 +1,7 @@
 import './App.css';
 import Routes from './routes'
 import {CircleArrow} from "react-scroll-up-button";
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -8,9 +9,9 @@ function App() {
     <div className="App">
         <CircleArrow 
           EasingType="linear"
-          ShowAtPosition={100}
-          AnimationDuration={100} />
+          ShowAtPosition={100} />
         <Routes/>
+        <Footer/>
 
     </div>
   );

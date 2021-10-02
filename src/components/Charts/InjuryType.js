@@ -8,8 +8,8 @@ import {
     Row,
     Col,
   } from "react-bootstrap";
-import msiaCSV from './msia-road.csv';
-import jpCSV from './jp-road.csv';
+import msiaCSV from "../../data/msia-road.csv";
+import jpCSV from "../../data/jp-road.csv";
 
 function InjuryType() {
   // to store input start year
@@ -22,11 +22,11 @@ function InjuryType() {
   const [jpData, setJpData] = useState([]);
 
   // to store total serious injury data
-  const [msiaTotalSerious, setMsiaTotalSerious] = useState(0);
-  const [jpTotalSerious, setJpTotalSerious] = useState(0);
+  const [msiaTotalSerious, setMsiaTotalSerious] = useState(164962);
+  const [jpTotalSerious, setJpTotalSerious] = useState(1263386);
   // to store total slight injury data
-  const [msiaTotalSlight, setMsiaTotalSlight] = useState(0);
-  const [jpTotalSlight, setJpTotalSlight] = useState(0);
+  const [msiaTotalSlight, setMsiaTotalSlight] = useState(464371);
+  const [jpTotalSlight, setJpTotalSlight] = useState(18688828);
 
   // to set PapaParse configuration
   const msiaConfig = {
@@ -114,9 +114,9 @@ function InjuryType() {
   return (
     <div>
         <Container>
-            <Row>
-                <Col sm>
-                    <Card className="card-stats">
+            <Row className="px-2">
+                <Col sm={8}>
+                    <Card>
                         <Row>
                             <Col sm>
                                 <Card.Body>

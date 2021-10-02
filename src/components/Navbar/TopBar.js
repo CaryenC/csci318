@@ -3,20 +3,21 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import appLogo from "../../images/applogo/whitebg.png";
 
 function TopBar() {
   return (
     <>
-      <Navbar bg="light" variant="light" expand="lg" sticky="top">
+      <Navbar bg="light shadow" variant="light" expand="lg" sticky="top">
         <Container>
           <Navbar.Brand>
-            <img
+            {/* <img
               alt=""
-              src="https://pbs.twimg.com/profile_images/1063925348205821958/DlGcxdOl.jpg"
-              width="30"
-              height="30"
+              src=""
+              width="50"
+              height="50"
               className="d-inline-block align-top"
-            />{" "}
+            /> */}
             Road Wise
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

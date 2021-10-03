@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import InfoCard from "./InfoCard/InfoCard";
 import caryen from "../../images/pictures/caryen.jpg";
 import json from "../../images/pictures/wei-de.jpg";
-import jinny from "../../images/pictures/img_avatar_female.png";
+import jinny from "../../images/pictures/zhiying.jpeg";
 import azizul from "../../images/pictures/azizul.png";
 import teamLogo from "../../images/teamlogo/whitebg.png";
 
@@ -48,20 +48,38 @@ const About = () => {
       name: "Mohammed Azizul Hoque Sheikh",
       major: "Software Engineering",
       responsibilities: [
-        { sl: 1, task: "One" },
-        { sl: 2, task: "Two" },
-        { sl: 3, task: "Three" },
+        { sl: 1, task: "Sorting out the system requirements" },
+        { sl: 2, task: "Sorting out the user requirements" },
+        { sl: 3, task: "Preparing initial working prototype" },
+        { sl: 4, task: "Component creating for Dynamic LIVE data" },
+        { sl: 5, task: "Fetching live data and data cleansing" },
+        { sl: 6, task: "Displaying back fetched data in the UI" },
+        {
+          sl: 7,
+          task: "Live comparison of fetched data among Malaysia & Japan",
+        },
+        { sl: 8, task: "Development of Use Case Diagram" },
+        { sl: 9, task: "..." },
+        { sl: 10, task: "..." },
       ],
     },
     {
       sl: 3,
       image: jinny,
       name: "Saw Zhi Ying",
-      major: "No Major",
+      major: "Software Engineering and System Security",
       responsibilities: [
-        { sl: 1, task: "One" },
-        { sl: 2, task: "Two" },
-        { sl: 3, task: "Three" },
+        { sl: 1, task: "Developing charts for the local CSV data (Malaysia)" },
+        {
+          sl: 2,
+          task: "Utilizing Google Geolocation API to produce a map for visualization ",
+        },
+        { sl: 3, task: "Involved in sourcing for CSV data" },
+        { sl: 4, task: "Documenting the Taiga.io progress" },
+        {
+          sl: 4,
+          task: "Documenting the exception handling methodologies used in development ",
+        },
       ],
     },
     {
@@ -86,6 +104,8 @@ const About = () => {
       <img src={teamLogo} alt="avatar team logo" />
       {/* team name */}
       <h3>AVATAR</h3>
+      <h4>DEVELOPER TEAM MEMBERS</h4>
+      <hr />
       <br />
       <div className="rowDiv">
         {data.map((item) => (

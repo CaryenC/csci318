@@ -6,7 +6,7 @@ function Insights() {
     return (
         <div>
             <Cards/>
-            <InjuryType/>
+            {/* <InjuryType/> */}
         </div>
     )
 }

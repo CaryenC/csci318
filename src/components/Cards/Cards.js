@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 // react-bootstrap components
 import {
     Card,
@@ -7,8 +7,11 @@ import {
     Col,
     Table
   } from "react-bootstrap";
+import InjuryType from 'components/Charts/InjuryType';
+import Seatbelt from 'components/Tables/Seatbelt';
 
 function Cards() {
+
     return (
         <div>
             <Container fluid="md" className="pt-3">
@@ -18,15 +21,7 @@ function Cards() {
                         {/* first graph here */}
                         <Row>
                             <Col>
-                                <Card className="p-3 mb-5">
-                                    <Card.Body>
-                                        <Card.Title>Card Title</Card.Title>
-                                        <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
+                                <InjuryType/>
                             </Col>
                         </Row>
                         {/* second graph here */}
@@ -74,77 +69,7 @@ function Cards() {
                     <Col md={4}>
                         <Row>
                             <Col>
-                                <Table bordered hover size="sm" responsive>
-                                    <thead>
-                                        <tr>
-                                            <th>Factors</th>
-                                            <th>Malaysia</th>
-                                            <th>Japan</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Drunk Driver</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Illegal Driving</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Insufficient Road Lighting</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Drunk Driver</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Illegal Driving</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Insufficient Road Lighting</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Drunk Driver</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Illegal Driving</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Insufficient Road Lighting</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Drunk Driver</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Illegal Driving</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Insufficient Road Lighting</td>
-                                            <td>15000</td>
-                                            <td>14000</td>
-                                        </tr>
-                                    </tbody>
-                                </Table>
+                                <Seatbelt/>
                             </Col>
                         </Row>
                     </Col>

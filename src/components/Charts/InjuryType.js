@@ -4,7 +4,6 @@ import { readString } from 'react-papaparse';
 // react-bootstrap components
 import {
     Card,
-    Container,
     Row,
     Col,
   } from "react-bootstrap";
@@ -15,7 +14,7 @@ function InjuryType() {
   // to store input start year
   const [startYear, setStartYear] = useState(1997);
   // to store input end year
-  const [endYear, setEndYear] = useState(2017);
+  const [endYear, setEndYear] = useState(2016);
 
   // to store Malaysia road data
   const [msiaData, setMsiaData] = useState([]);
@@ -113,38 +112,32 @@ function InjuryType() {
   
   return (
     <div>
-        <Container>
-            <Row className="px-2">
-                <Col sm={8}>
-                    <Card>
-                        <Row>
-                            <Col sm>
-                                <Card.Body>
-                                    <Card.Title as="h4">Total Serious Injury</Card.Title>
-                                    <Doughnut data={seriousTypeData} />
-                                </Card.Body>
-                            </Col>
-                            <Col sm>
-                                <Card.Body>
-                                    <Card.Title as="h4">Total Slight Injury</Card.Title>
-                                    <Doughnut data={slightTypeData} />
-                                </Card.Body>
-                            </Col>
-                        </Row>
-                        <Row>
-                          <Col xs>
-                            <p>From:</p>
-                            <input type="text" onChange={(e)=>setStartYear(e.target.value)} />
-                          </Col>
-                          <Col xs>
-                            <p>To:</p>
-                            <input type="text" onChange={(e)=>setEndYear(e.target.value)} />
-                          </Col>
-                        </Row>
-                    </Card>
+          <Card className="p-3 mb-5">
+              <Row>
+                  <Col>
+                      <Card.Body>
+                          <Card.Title as="h4">Total Serious Injury</Card.Title>
+                          <Doughnut data={seriousTypeData} />
+                      </Card.Body>
+                  </Col>
+                  <Col>
+                      <Card.Body>
+                          <Card.Title as="h4">Total Slight Injury</Card.Title>
+                          <Doughnut data={slightTypeData} />
+                      </Card.Body>
+                  </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <p>From:</p>
+                  <input value={startYear} type="text" onChange={(e)=>setStartYear(e.target.value)} />
                 </Col>
-            </Row>
-        </Container>
+                <Col>
+                  <p>To:</p>
+                  <input value={endYear} type="text" onChange={(e)=>setEndYear(e.target.value)} />
+                </Col>
+              </Row>
+          </Card>
     </div>
     )
 }

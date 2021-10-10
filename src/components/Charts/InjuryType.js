@@ -131,8 +131,8 @@ const filterYear = () => {
 
   // update total serious and slight injuries
   // for both Malaysia and Japan
-  setJapanSerious(newMsiaTotalSerious);
-  setJapanSlight(newMsiaTotalSlight);
+  setMsiaSerious(newMsiaTotalSerious);
+  setMsiaSlight(newMsiaTotalSlight);
   
   console.log(msiaSerious); 
   console.log(msiaSlight);

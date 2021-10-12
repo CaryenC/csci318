@@ -4,8 +4,6 @@ import { readString } from 'react-papaparse';
 import seatbeltCSV from "../../data/seat_belt_wearing_rate.csv";
 
 function Seatbelt() {
-    
-    const [seatbeltData, setSeatbeltData] = useState({});
 
     // table data
     const [datatable, setDatatable] = useState({
@@ -13,71 +11,73 @@ function Seatbelt() {
             {
                 label: 'Seat Belt Wearing Rate',
                 field: 'location',
-                width: 150,
-                attributes:{
-                    'aria-controls': 'DataTable',
-                    'aria-label': 'Name',
-                }
+                sort: 'asc',
+                width: 150
             },
             {
                 label: 'Malaysia',
                 field: 'malaysia',
-                width: 150,
+                sort: 'asc',
+                width: 150
             },
             {
                 label: 'Japan',
                 field: 'japan',
-                width: 150,
+                sort: 'asc',
+                width: 150
             }
         ],
-        rows: [
-            {
-                location: 'Front seat',
-                malaysia: '73.8',
-                japan: '94.9'
-            }
-            // need further mapping to the real data
-        ]
-    })
-
-    // to set PapaParse configuration
-    const seatbeltConfig = {
-        header: true,
-        download: true,
-        complete: (result, file) => {
-            console.log(result.data);
-            setSeatbeltData(result.data);
-        },
-        error: (error, file)=>{
-            console.log('Error: ', error, file);
-        },
-    };
-
-    // to push seatbeltData to table
-    const addData = () => {
-        const locations = 'Rear seat';
-        const msia = '102';
-        const jp = '201';
-        const obj = {'location': locations, 'malaysia':msia, 'japan':jp};
-
-        setDatatable({rows: [...datatable.rows, obj]});
-
-        console.log(datatable.rows);
-    }
-
+        rows: []
+    });
+    
     useEffect(() => {
+        console.log("Inside first useEffect...");
+        const seatbeltConfig = {
+            header: true,
+            download: true,
+            complete: (result, file) => {
+                console.log('Complete: ', result);
+                // Malaysia
+                var a = result.data[95][" All occupants"];
+                var b = result.data[95][" Drivers only"];
+                var c = result.data[95][" Front seat"];
+                var d = result.data[95][" Rear seat"];
+
+                // Japan
+                var e = result.data[78][" All occupants"];
+                var f = result.data[78][" Drivers only"];
+                var g = result.data[78][" Front seat"];
+                var h = result.data[78][" Rear seat"];
+
+                const locations = ['All occupants', 'Drivers only', 'Front seat', 'Rear seat'];
+                const msiaData = [a, b, c, d];
+                const japanData = [e, f, g, h];
+
+                for(let i = 0; i < locations.length; i++){
+                    const obj = {'location': locations[i], 'malaysia':msiaData[i], 'japan':japanData[i]};
+                    datatable.rows[i] = obj;
+                    console.log(datatable.rows[i]);
+                    setDatatable(datatable.rows[i]);
+                }
+            },
+            error: (error, file) => {
+                console.log('Error: ', error, file);
+            },
+        };
+        console.log("Processing seatbeltConfig object...");
+        console.log(seatbeltConfig);
+        console.log("Reading string of seatbeltCSV and seatbeltConfig...");
         readString(seatbeltCSV, seatbeltConfig);
-        addData();
-        // console.log(datatable.rows[0].location); // return 'Front seat'
+        console.log("Done reading string of seatbeltCSV and seatbeltConfig...");
       }, [])
-      
-    return (
+
+      return (
         <div>
             <MDBDataTable 
-            responsiveMd 
-            bordered 
-            hover
-            data={datatable} />
+                responsiveMd 
+                bordered 
+                hover
+                data={datatable} />
         </div>
     )
 }

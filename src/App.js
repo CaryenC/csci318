@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-        <CircleArrow 
+        <CircleArrow
           EasingType="linear"
           ShowAtPosition={100} />
         <Routes/>

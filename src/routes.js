@@ -6,20 +6,33 @@ import InfoThree from "./pages/InfoThree";
 import InfoFour from "./pages/InfoFour";
 import About from "./pages/About/About";
 import TopBar from "./components/Navbar/TopBar.js";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import NotFound from "./pages/NotFound";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function routes() {
   return (
     <div>
-      <Router>
-        <TopBar />
-        <Route path="/insights" component={Insights}></Route>
-        <Route path="/info-one" component={InfoOne}></Route>
-        <Route path="/info-two" component={InfoTwo}></Route>
-        <Route path="/info-three" component={InfoThree}></Route>
-        <Route path="/info-four" component={InfoFour}></Route>
-        <Route path="/about" component={About}></Route>
-      </Router>
+    <Router>
+    <TopBar />
+    <nav>
+    <Switch>
+    <Route exact path="/insights" component={Insights}></Route>
+    <Route exact path="/info-one" component={InfoOne}></Route>
+    <Route exact path="/info-two" component={InfoTwo}></Route>
+    <Route exact path="/info-three" component={InfoThree}></Route>
+    <Route exact path="/info-four" component={InfoFour}></Route>
+    <Route exact path="/about" component={About}></Route>
+    <Route path="*">
+    <NotFound />
+    </Route>
+    </Switch>
+    </nav>
+    </Router>
     </div>
   );
 }

@@ -5,71 +5,54 @@ import seatbeltCSV from "../../data/seat_belt_wearing_rate.csv";
 
 function Seatbelt() {
 
-    // table data
-    const [datatable, setDatatable] = useState({
-        columns: [
-            {
-                label: 'Seat Belt Wearing Rate',
-                field: 'location',
-                sort: 'asc',
-                width: 150
-            },
-            {
-                label: 'Malaysia',
-                field: 'malaysia',
-                sort: 'asc',
-                width: 150
-            },
-            {
-                label: 'Japan',
-                field: 'japan',
-                sort: 'asc',
-                width: 150
-            }
-        ],
-        rows: []
-    });
+    const column = [
+        {
+            label: 'Seat Belt Wearing Rate',
+            field: 'location',
+            sort: 'asc',
+            width: 150
+        },
+        {
+            label: 'Malaysia',
+            field: 'malaysia',
+            sort: 'asc',
+            width: 150
+        },
+        {
+            label: 'Japan',
+            field: 'japan',
+            sort: 'asc',
+            width: 150
+        }
+    ];
+
+    const row = [
+        {
+            location: 'All occupants',
+            malaysia: '48.4',
+            japan: '94.9/89.5',
+        },
+        {
+            location: 'Drivers only',
+            malaysia: '82.9',
+            japan: '99.5/98.5',
+        },
+        {
+            location: 'Front seat',
+            malaysia: '73.8',
+            japan: '98/94.9',
+        },
+        {
+            location: 'Rear seat',
+            malaysia: '9.6',
+            japan: '71.8/36',
+        },
+    ];
     
-    useEffect(() => {
-        console.log("Inside first useEffect...");
-        const seatbeltConfig = {
-            header: true,
-            download: true,
-            complete: (result, file) => {
-                console.log('Complete: ', result);
-                // Malaysia
-                var a = result.data[95][" All occupants"];
-                var b = result.data[95][" Drivers only"];
-                var c = result.data[95][" Front seat"];
-                var d = result.data[95][" Rear seat"];
-
-                // Japan
-                var e = result.data[78][" All occupants"];
-                var f = result.data[78][" Drivers only"];
-                var g = result.data[78][" Front seat"];
-                var h = result.data[78][" Rear seat"];
-
-                const locations = ['All occupants', 'Drivers only', 'Front seat', 'Rear seat'];
-                const msiaData = [a, b, c, d];
-                const japanData = [e, f, g, h];
-
-                for(let i = 0; i < locations.length; i++){
-                    const obj = {'location': locations[i], 'malaysia':msiaData[i], 'japan':japanData[i]};
-                    datatable.rows[i] = obj;
-                    console.log(datatable.rows[i]);
-                    setDatatable(datatable.rows[i]);
-                }
-            },
-            error: (error, file) => {
-                console.log('Error: ', error, file);
-            },
-        };
-        console.log("Processing seatbeltConfig object...");
-        console.log(seatbeltConfig);
-        console.log("Reading string of seatbeltCSV and seatbeltConfig...");
-        readString(seatbeltCSV, seatbeltConfig);
-        console.log("Done reading string of seatbeltCSV and seatbeltConfig...");
-      }, [])
+    const [datatable, setDatatable] = useState({
+        columns: column,
+        rows: row,
+    });
 
       return (
         <div>

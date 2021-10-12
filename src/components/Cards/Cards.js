@@ -43,9 +43,9 @@ function Cards() {
                             <Col md={6}>
                                 <Card className="p-3 mb-5">
                                     <Card.Body>
-                                        <Card.Title>Hospitals in Japan</Card.Title>
+                                        <Card.Title>Number of Hospitals in Japan</Card.Title>
                                         <Card.Text>
-                                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19cvjSCewbht-4ixLv4ZHUT8DyaUq4zUE" display="block" width="300" height="400" frameborder="0" style={{border:0}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19cvjSCewbht-4ixLv4ZHUT8DyaUq4zUE" display="block"  width="100%" height="400" frameborder="0" style={{border:0}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
@@ -54,9 +54,9 @@ function Cards() {
                             <Col md={6}>
                                 <Card className="p-3 mb-5">
                                     <Card.Body>
-                                        <Card.Title>Hospitals in Malaysia</Card.Title>
+                                        <Card.Title>Number of Hospitals in Malaysia</Card.Title>
                                         <Card.Text>
-                                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1hzq26yfrv9kKn0yNpShAzvfkG4gJQymk" display="block"  width="300" height="400" frameborder="0" style={{border:0}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1hzq26yfrv9kKn0yNpShAzvfkG4gJQymk" display="block"  width="100%" height="400" frameborder="0" style={{border:0}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>

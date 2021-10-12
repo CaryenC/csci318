@@ -1,18 +1,16 @@
 import './App.css';
 import Routes from './routes'
-import {CircleArrow} from "react-scroll-up-button";
+import ScrollButton from './components/ScrollButton';
+//import {CircleArrow} from "react-scroll-up-button";
 import Footer from './components/Footer/Footer';
 
 function App() {
 
   return (
     <div className="App">
-        <CircleArrow
-          EasingType="linear"
-          ShowAtPosition={100} />
-        <Routes/>
-        <Footer/>
-
+      <Routes/>
+      <Footer/>
+      <ScrollButton/>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { NavbarBrand, Navbar, Nav, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import appLogo from "../../images/applogo/whitebg.png";
 
@@ -10,20 +10,17 @@ function TopBar() {
     <>
       <Navbar bg="light shadow" variant="light" expand="lg" sticky="top">
         <Container>
-          <Navbar.Brand>
-            {/* <img
-              alt=""
-              src=""
+          <NavbarBrand className="pt-0">
+            <img
+              src={appLogo}
               width="50"
               height="50"
-              className="d-inline-block align-top"
-            /> */}
-            Road Wise
-          </Navbar.Brand>
+            />
+            </NavbarBrand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <LinkContainer to="/insights">
+              <LinkContainer to="/">
                 <Nav.Link>Insights</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/info-one">

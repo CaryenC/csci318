@@ -21,7 +21,7 @@ function routes() {
     <TopBar />
     <nav>
     <Switch>
-    <Route exact path="/insights" component={Insights}></Route>
+    <Route exact path="/" component={Insights}></Route>
     <Route exact path="/info-one" component={InfoOne}></Route>
     <Route exact path="/info-two" component={InfoTwo}></Route>
     <Route exact path="/info-three" component={InfoThree}></Route>

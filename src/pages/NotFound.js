@@ -2,10 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NotFound = () => (
-  <div>
-    <h1>404 - Not Found!</h1>
+  <div
+  style={{
+    alignItems: "center",
+    paddingTop: "100px",
+    flexDirection: "row",
+    justifyContent:"center",
+    flexWrap: "wrap"
+
+  }}
+  >
+    <h1>Error 404: Page Not Found</h1>
     <Link to="/">
-      Go Home
+      Return Home
     </Link>
   </div>
 );

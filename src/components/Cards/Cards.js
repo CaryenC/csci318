@@ -9,6 +9,7 @@ import {
   } from "react-bootstrap";
 import InjuryType from 'components/Charts/InjuryType';
 import Seatbelt from 'components/Tables/Seatbelt';
+import Dynamic from 'components/Dynamic/Dynamic';
 
 function Cards() {
 
@@ -27,15 +28,7 @@ function Cards() {
                         {/* second graph here */}
                         <Row>
                             <Col>
-                                <Card className="p-3 mb-5">
-                                    <Card.Body>
-                                        <Card.Title>Card Title</Card.Title>
-                                        <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
+                                <Dynamic/>
                             </Col>
                         </Row>
                         <Row>

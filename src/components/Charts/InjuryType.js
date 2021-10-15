@@ -136,12 +136,17 @@ const filterYear = () => {
         </Row>
         <Row>
           <Col>
-            <p>From:</p>
-            <input value={startYear} type="text" onChange={(e)=>setStartYear(e.target.value)} />
+            <p>From:</p><select name="year" id="year" onChange={(e)=>setStartYear(e.target.value)}>
+              {japanData.map(data => <option value={data.Year}>{data.Year}</option>)}
+            </select>
+            {/* <input value={startYear} type="text" onChange={(e)=>setStartYear(e.target.value)} /> */}
           </Col>
           <Col>
-            <p>To:</p>
-            <input value={endYear} type="text" onChange={(e)=>setEndYear(e.target.value)} />
+            
+            <p>To:</p><select name="year" id="year" onChange={(e)=>setEndYear(e.target.value)}>
+              {japanData.map(data => <option value={data.Year}>{data.Year}</option>)}
+            </select>
+            {/* <input value={endYear} type="text" onChange={(e)=>setEndYear(e.target.value)} /> */}
           </Col>
         </Row>
       </Card>

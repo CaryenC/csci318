@@ -59,8 +59,8 @@ const About = () => {
           task: "Live comparison of fetched data among Malaysia & Japan",
         },
         { sl: 8, task: "Development of Use Case Diagram" },
-        { sl: 9, task: "..." },
-        { sl: 10, task: "..." },
+        { sl: 9, task: "Exception handling of live/dynamic data" },
+        { sl: 10, task: "Use case diagram and description table" },
       ],
     },
     {

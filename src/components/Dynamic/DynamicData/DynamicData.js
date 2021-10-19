@@ -135,7 +135,7 @@ const DynamicData = () => {
   }
 
   return (
-    <Container>
+    <Container className="m-3" fluid>
       <Alert variant="success">
         <span style={{ color: "red", fontSize: "16px", fontWeight: "800" }}>
           LIVE &nbsp;

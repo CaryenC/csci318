@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Alert, Badge, Col, Container, Row } from "react-bootstrap";
 import { Bar } from "react-chartjs-2";
-import JapanData from "../JapanData/JapanData";
-import MalaysiaData from "../MalaysiaData/MalaysiaData";
 
 const DynamicData = () => {
   const errorText = "Something is wrong, Please try again later.";
-  const errorFetch = "Sorry, unable to fetch data from the service.";
+  const errorMalaysiaData =
+    "Sorry, unable to fetch Malaysia's data from the service.";
+  const errorJapanData =
+    "Sorry, unable to fetch Malaysia's data from the service.";
 
-  const URLmy = `https://api.worldbank.org/v2/country/my/indicator/SH.STA.TRAF.P5?date2010:2019&format=json`;
+  const URLmy = `https://apii.worldbank.org/v2/country/my/indicator/SH.STA.TRAF.P5?date2010:2019&format=json`;
   const URLjp = `https://api.worldbank.org/v2/country/jp/indicator/SH.STA.TRAF.P5?date2010:2019&format=json`;
 
   const [myData, setMyData] = useState([]);
@@ -117,9 +118,6 @@ const DynamicData = () => {
         if (item.value !== null) {
           japanData.unshift(item.value);
         }
-        // if (!year) {
-        //   year.unshift(item.date);
-        // }
       })()
     );
   }
@@ -144,12 +142,10 @@ const DynamicData = () => {
       </Alert>
       <Row>
         <Col sm>
-          {!isMyLoaded && <Badge bg="danger">{errorFetch}</Badge>}
-          <MalaysiaData />
+          {!isMyLoaded && <Badge bg="danger">{errorMalaysiaData}</Badge>}
         </Col>
         <Col sm>
-          {!isJpLoaded && <Badge bg="danger">{errorFetch}</Badge>}
-          <JapanData />
+          {!isJpLoaded && <Badge bg="danger">{errorJapanData}</Badge>}
         </Col>
       </Row>
       {!dynamicData && <Badge bg="danger">{errorText}</Badge>}

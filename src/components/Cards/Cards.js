@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Card, Container, Row, Col, Table } from "react-bootstrap";
 import InjuryType from "components/Charts/InjuryType";
 import Seatbelt from "components/Tables/Seatbelt";
-import DynamicData from "components/Dynamic/DynamicData/DynamicData";
+import DynamicData from "components/DynamicData/DynamicData";
 
 function Cards() {
   return (

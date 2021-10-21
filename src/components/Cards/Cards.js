@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // react-bootstrap components
 import { Card, Container, Row, Col, Table } from "react-bootstrap";
 import InjuryType from "components/Charts/InjuryType";
+import RoadDeaths from "components/Charts/RoadDeaths";
 import Seatbelt from "components/Tables/Seatbelt";
 import DynamicData from "components/DynamicData/DynamicData";
 
@@ -22,6 +23,12 @@ function Cards() {
             <Row>
               <Col>
                 <DynamicData />
+              </Col>
+            </Row>
+            {/* third graph here */}
+            <Row>
+              <Col>
+                <RoadDeaths />
               </Col>
             </Row>
             <Row>

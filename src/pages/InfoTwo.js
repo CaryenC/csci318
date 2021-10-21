@@ -8,26 +8,26 @@ import { Card, Row, Col } from "react-bootstrap";
 function InfoTwo() {
   return (
     <>
-      <div className="container">
-        <img
-          src={img1}
-          className="img-fluid shadow-4"
-          alt="..."
-          style={{ paddingTop: "3px" }}
-          width="100%"
-        />
-      </div>
+        <Container>
+            <div className="pt-3">
+            <img
+            src={img1}
+            className="img-fluid shadow-4"
+            alt="..."
+            width="100%"
+            />
+        </div>
 
-      <Container>
+      
         <h1>
           <br />
           Road Safety Plan (2021-2030)
         </h1>
-      </Container>
+        
 
       <div
         className="text-start"
-        style={{ paddingLeft: 150, paddingRight: 150 }}
+        // style={{ paddingLeft: 150, paddingRight: 150 }}
       >
         <p>
           Road Safety Plan of Malaysia 2014-2020 (RSPM 2014-2020) has been
@@ -111,7 +111,7 @@ function InfoTwo() {
           </Row>
         </Card>
 
-        <h6>
+        <h6 className="pt-5">
           <br />
           <strong>Harvard referencing: </strong>
         </h6>
@@ -131,6 +131,7 @@ function InfoTwo() {
           https://www.mot.gov.my/en/land/safety/road-accident-and-facilities
         </p>
       </div>
+      </Container>
     </>
   );
 }

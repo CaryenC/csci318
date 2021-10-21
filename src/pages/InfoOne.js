@@ -4,27 +4,26 @@ import img1 from "../images/pictures/Irankidsphoto.png";
 
 function InfoOne() {
   return (
-    <Container>
+    <Container className="pt-3">
       <div className="container">
         <img
           src={img1}
           className="img-fluid shadow-4"
           alt="..."
-          style={{ paddingTop: "3px" }}
           width="100%"
         />
       </div>
 
-      <Container>
+      
         <h1 style={{ paddingTop: 50 }}>
           Campaign launched to make 30 km/h streets the norm for cities
           worldwide
         </h1>
-      </Container>
+      
 
       <div
         className="text-start"
-        style={{ paddingLeft: 150, paddingRight: 150 }}
+        // style={{ paddingLeft: 150, paddingRight: 150 }}
       >
         <p>
           <br />

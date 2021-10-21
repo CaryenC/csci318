@@ -6,12 +6,12 @@ import img2 from "../images/pictures/antonio.jpg";
 function InfoThree() {
   return (
     <>
+    <Container className="pt-3">
       <div className="container">
         <img
           src={img1}
           className="img-fluid shadow-4"
           alt="..."
-          style={{ paddingTop: "3px" }}
           width="100%"
         />
         <p>
@@ -20,17 +20,14 @@ function InfoThree() {
         </p>
       </div>
 
-      <Container>
+      
         <h1 style={{ paddingBottom: 30 }}>
           <br />
           WHO Secretary-General's Message for 2020
         </h1>
-      </Container>
+      
 
-      <div
-        className="text-start"
-        style={{ paddingLeft: 150, paddingRight: 150 }}
-      >
+      <div className="text-start">
         <p>
           Road traffic collisions are a major health and development concern.
           Some 3700 fathers, mothers, brothers, sisters, sons, daughters,
@@ -60,7 +57,7 @@ function InfoThree() {
         </p>
       </div>
 
-      <div className="container">
+      <div>
         <br />
         <br />
         <img
@@ -82,15 +79,18 @@ function InfoThree() {
         </div>
       </div>
 
-      <h6 style={{ paddingTop: 30 }}>
+      <div  className="pt-3">
+      <h6 className="text-start">
         <br />
         <strong>Harvard referencing: </strong>
       </h6>
-      <p className="text-start" style={{ paddingLeft: 150, paddingRight: 150 }}>
+      <p className="text-start">
         Nations, U., 2021. World Day of Remembrance for Road Traffic Victims |
         Messages | United Nations. [online] United Nations. Available at:
         https://www.un.org/en/observances/road-traffic-victims-day/messages
       </p>
+      </div>
+    </Container>
     </>
   );
 }

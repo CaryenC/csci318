@@ -1,35 +1,28 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Figure } from "react-bootstrap";
 import img1 from "../images/pictures/Irankidsphoto.png";
 
 function InfoOne() {
   return (
     <Container className="pt-3">
-      <div className="container">
-        <img
+      <Figure>
+        <Figure.Image
           src={img1}
           className="img-fluid shadow-4"
           alt="..."
           width="100%"
         />
-      </div>
-
-      
-        <h1 style={{ paddingTop: 50 }}>
-          Campaign launched to make 30 km/h streets the norm for cities
-          worldwide
-        </h1>
-      
-
-      <div
-        className="text-start"
-        // style={{ paddingLeft: 150, paddingRight: 150 }}
-      >
-        <p>
-          <br />
-          <strong>Streets for Life: Why #Love30?</strong>
-          <br />
-        </p>
+        <Figure.Caption>
+        Credits: Road Safety Pioneers Iran
+        </Figure.Caption>
+      </Figure>
+      <h1>
+        Campaign Launched to Make 30 KM/H Streets<br/> The Norm For Cities Worldwide
+      </h1>
+      <br/>
+      <div className="text-start">
+        <h2>Streets for Life: Why #Love30?</h2>
+        <hr/>
         <p>
           Low speed streets save lives and are the heart of any community. 30
           km/h (20 mph) speed limits where people and traffic mix make for
@@ -40,11 +33,9 @@ function InfoOne() {
           #Love30 campaign to call for 30 km/h speed limits to be the norm for
           cities, towns and villages worldwide.
         </p>
-        <p>
-          <br />
-          <strong>What are the benefits of 30 km/h streets?</strong>
-          <br />
-        </p>
+        <br />
+        <h2>What are the benefits of 30 km/h streets?</h2>
+        <hr/>
         <p>
           <em>30 km/h streets are safe and healthy.</em>
         </p>
@@ -88,15 +79,15 @@ function InfoOne() {
           Decade of Action for Road Safety 2021-2030 and the High-Level Meeting
           of the UN General Assembly in 2022.&nbsp;
         </p>
-        <h6>
-          <br />
-          <strong>Harvard referencing: </strong>
-        </h6>
-        <p>
-          Who.int. 2021. Campaign launched to make 30 km/h streets the norm for
-          cities worldwide. [online] Available at:
-          https://www.who.int/news/item/22-03-2021-campaign-launched-to-make-30-km-h-streets-the-norm-for-cities-worldwide{" "}
-        </p>
+        <h2>Harvard Reference</h2>
+        <hr/>
+        <ol>
+          <li>
+            Who.int. 2021. Campaign launched to make 30 km/h streets the norm for
+            cities worldwide. [online] Available at:
+            https://www.who.int/news/item/22-03-2021-campaign-launched-to-make-30-km-h-streets-the-norm-for-cities-worldwide{" "}
+          </li>
+        </ol>
       </div>
     </Container>
   );

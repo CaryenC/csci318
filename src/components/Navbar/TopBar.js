@@ -23,17 +23,17 @@ function TopBar() {
               <LinkContainer to="/">
                 <Nav.Link>Insights</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/info-one">
-                <Nav.Link>Info One</Nav.Link>
+              <LinkContainer to="/road-safety-campaign">
+                <Nav.Link>Road Safety Campaign</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/info-two">
-                <Nav.Link>Info Two</Nav.Link>
+              <LinkContainer to="/road-safety-plan-2021-2030">
+                <Nav.Link>Road Safety Plan (2021 - 2030)</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/info-three">
-                <Nav.Link>Info Three</Nav.Link>
+              <LinkContainer to="/messages-for-the-victims">
+                <Nav.Link>Messages For the Victims</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/info-four">
-                <Nav.Link>Info Four</Nav.Link>
+              <LinkContainer to="/news">
+                <Nav.Link>News</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/about">
                 <Nav.Link>About</Nav.Link>

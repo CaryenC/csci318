@@ -7,28 +7,23 @@ import { Card, Row, Col } from "react-bootstrap";
 
 function InfoTwo() {
   return (
-    <>
-        <Container>
-            <div className="pt-3">
-            <img
-            src={img1}
-            className="img-fluid shadow-4"
-            alt="..."
-            width="100%"
-            />
-        </div>
-
-      
-        <h1>
-          <br />
-          Road Safety Plan (2021-2030)
-        </h1>
-        
-
-      <div
-        className="text-start"
-        // style={{ paddingLeft: 150, paddingRight: 150 }}
-      >
+    <Container>
+      <div className="pt-3">
+        <img
+          src={img1}
+          className="img-fluid shadow-4"
+          alt="..."
+          width="100%"
+        />
+      </div>
+      <br />
+      <h1>
+        Road Safety Plan<br/>(2021-2030)
+      </h1>
+      <br />
+      <div className="text-start">
+        <h2>About The Plan</h2>
+        <hr/>
         <p>
           Road Safety Plan of Malaysia 2014-2020 (RSPM 2014-2020) has been
           formulated to address all matters related to road safety in the
@@ -51,12 +46,8 @@ function InfoTwo() {
           Safer road Users and Post-Crash Management as recommended in Decade of
           Actions for Road Safety by World Health Organization (WHO).
         </p>
-        <h5>
-          <strong>
-            <br />
-            Road Safety Regulation in Malaysia
-          </strong>
-        </h5>
+        <h2>Road Safety Regulation in Malaysia</h2>
+        <hr/>
         <p>
           Road safety regulations in Malaysia include speed limit, seatbelt
           wearing, helmet wearing, and a maximum BAC level. For example, speed
@@ -71,13 +62,9 @@ function InfoTwo() {
           was implemented in January 2020 and must comply with the UN Regulation
           standard – R44 and R129.​
         </p>
-        <h5>
-          <strong>
-            <br />
-            Road Accidents and Fatalities in Malaysia
-          </strong>
-        </h5>
-        <h5>Road Crash Data Tracking and Collection</h5>
+        <h2>Road Accidents and Fatalities in Malaysia</h2>
+        <hr/>
+        <h3>Road Crash Data Tracking and Collection</h3>
         <p>
           There are two types of crash data collection in terms of method to
           track road crash and fatalities. One that is the authorized-based by
@@ -96,43 +83,48 @@ function InfoTwo() {
           number at 6,167 in 2019 during the last ten years (Figure 2).
         </p>
         <br />
-        <Card style={{ paddingLeft: 10, paddingRight: 10 }}>
+        <Container fluid="md">
           <Row>
-            <Col className="container">
-              <br />
-              <img src={img2} className="img-fluid" alt="..." />
-              <p>Figure 1: Malaysia Road Accident 2010 - 2019</p>
+            <Col md={6}>
+              <Card className="p-3 mb-5">
+                <Card.Body>
+                  <img src={img2} className="img-fluid" alt="..." />
+                </Card.Body>
+                <Card.Footer className="text-muted">Figure 1: Malaysia Road Accident 2010 - 2019</Card.Footer>
+              </Card>
             </Col>
-            <Col className="container">
-              <br />
-              <img src={img3} className="img-fluid" alt="..." />
-              <p>Figure 2: Malaysia Road Fatalities 2010 - 2019​​</p>
+            <Col md={6}>
+              <Card className="p-3 mb-5">
+                <Card.Body>
+                <img src={img3} className="img-fluid" alt="..." />
+                </Card.Body>
+                <Card.Footer className="text-muted">Figure 2: Malaysia Road Fatalities 2010 - 2019​​</Card.Footer>
+              </Card>
             </Col>
           </Row>
-        </Card>
-
-        <h6 className="pt-5">
-          <br />
-          <strong>Harvard referencing: </strong>
-        </h6>
-        <p>
-          1. Mot.gov.my. 2021. Ministry of Transport Malaysia Official Portal
-          Road Safety Regulation in Malaysia. [online] Available at:
-          https://www.mot.gov.my/en/land/safety/road-safety-regulation
-        </p>
-        <p>
-          2. Mot.gov.my. 2021. Ministry of Transport Malaysia Official Portal
-          Road Safety Regulation in Malaysia. [online] Available at:
-          https://www.mot.gov.my/en/land/safety/road-safety-regulation
-        </p>
-        <p>
-          3. Mot.gov.my. 2021. Ministry of Transport Malaysia Official Portal
-          Road Accidents and Fatalities in Malaysia. [online] Available at:
-          https://www.mot.gov.my/en/land/safety/road-accident-and-facilities
-        </p>
+        </Container>
+        
+        <h2>Harvard Reference</h2>
+        <hr/>
+        <ol>
+          <li>
+            Mot.gov.my. 2021. Ministry of Transport Malaysia Official Portal
+            Road Safety Regulation in Malaysia. [online] Available at:
+            https://www.mot.gov.my/en/land/safety/road-safety-regulation  
+          </li>
+          <li>
+            Mot.gov.my. 2021. Ministry of Transport Malaysia Official Portal
+            Road Safety Regulation in Malaysia. [online] Available at:
+            https://www.mot.gov.my/en/land/safety/road-safety-regulation  
+          </li>
+          <li>
+            Mot.gov.my. 2021. Ministry of Transport Malaysia Official Portal
+            Road Accidents and Fatalities in Malaysia. [online] Available at:
+            https://www.mot.gov.my/en/land/safety/road-accident-and-facilities  
+          </li>
+        </ol>
       </div>
       </Container>
-    </>
   );
 }
 

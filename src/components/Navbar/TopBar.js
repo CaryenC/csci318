@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { NavbarBrand, Navbar, Nav, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import appLogo from "../../images/applogo/whitebg.png";
+import appLogo from "../../images/applogo/full.png";
 
 function TopBar() {
   return (
@@ -11,11 +11,12 @@ function TopBar() {
       <Navbar bg="light shadow" variant="light" expand="lg" sticky="top">
         <Container>
           <NavbarBrand className="pt-0">
+            <a href="http://localhost:3000/">
             <img
               src={appLogo}
-              width="50"
               height="50"
-            />
+              href="http://localhost:3000/"
+            /></a>
             </NavbarBrand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

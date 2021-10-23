@@ -12,7 +12,8 @@ function InfoFour() {
             src={img1} 
             className="img-fluid shadow-4" 
             alt="..." 
-            width="100%" />
+            width="100%"
+          />
           <Figure.Caption>
             Protest connected with speed cameras, outside the High Court in
             London, 2003. Photo courtesy of the Brigitte Chaudhry.

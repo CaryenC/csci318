@@ -10,7 +10,7 @@ function Footer() {
         <MDBFooter className="font-small">
             <div className="footer-copyright text-right py-3">
                 <MDBContainer fluid>
-                    &copy; {new Date().getFullYear()} Copyright <a href="http://localhost:3000/about"> Team Avatar </a>
+                    &copy; {new Date().getFullYear()} Copyright by <a href="http://localhost:3000/about"> Team Avatar </a>
                 </MDBContainer>
             </div>
         </MDBFooter>

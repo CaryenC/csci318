@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Alert, Badge, Col, Container, Card, Row } from "react-bootstrap";
+import { Alert, Badge, Col, Card, Row } from "react-bootstrap";
 import { Bar } from "react-chartjs-2";
 
 const DynamicData = () => {
@@ -60,6 +60,11 @@ const DynamicData = () => {
       },
     ],
   };
+
+  const option = {
+    responsive: true,
+    maintainAspectRatio : false
+  }
 
   useEffect(() => {
     fetch(URLmy)
@@ -135,13 +140,10 @@ const DynamicData = () => {
   return (
     <div>
       <Card className="p-3 mb-5">
-        <Card.Header as="h2">Mortality Caused by Road Traffic Injury</Card.Header>
-        {/* <Alert variant="success">
-          <span style={{ color: "red", fontSize: "16px", fontWeight: "800" }}>
+        <Card.Title as="h2"><span style={{ color: "red", fontSize: "16px", fontWeight: "800" }}>
             LIVE &nbsp;
-          </span>
-          Data for mortality caused by road traffic injury
-        </Alert> */}
+          </span>Mortality Caused by Road Traffic Injury</Card.Title>
+          <hr/>
         <Row>
           <Col sm>
             <br></br>
@@ -153,7 +155,9 @@ const DynamicData = () => {
           </Col>
         </Row>
         {!dynamicData && <Badge bg="danger">{errorText}</Badge>}
-        {dynamicData && <Bar data={dynamicData} />}
+        <div style={{ height:"400px"}}>
+        {dynamicData && <Bar data={dynamicData} options={option} />}
+        </div>
       </Card>
     </div>
   );

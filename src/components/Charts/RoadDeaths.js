@@ -240,7 +240,10 @@ function RoadDeaths() {
       ]
   }
 
-
+  const option = {
+    responsive: true,
+    maintainAspectRatio : false
+  }
 
   return (
 
@@ -248,8 +251,11 @@ function RoadDeaths() {
         
         <Row>
             <Col>
-                <Card.Title as="h4">Malaysia and Japan Road Deaths</Card.Title>
-                <Bar data={data} />
+                <Card.Title as="h2">Malaysia and Japan Road Deaths</Card.Title>
+                <hr/>
+                <div style={{ height:"400px"}}>
+                <Bar data={data} options={option}/>
+                </div>
             </Col>
         </Row>
 

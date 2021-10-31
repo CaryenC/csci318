@@ -120,7 +120,8 @@ const filterYear = () => {
   return (
     <div>
       <Card className="p-3 mb-5">
-        <Card.Header as="h2">Total Serious and Slight Injury</Card.Header>
+        <Card.Title as="h2">Total Serious and Slight Injury</Card.Title>
+        <hr/>
         <Row>
           <Col>
               <Card.Body>

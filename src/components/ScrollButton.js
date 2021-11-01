@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const Button = styled.div`
    position: fixed; 
    width: 100%;
-   left: 45%;
+   left: 43%;
    bottom: 50px;
    height: 20px;
    font-size: 3rem;
@@ -40,7 +40,7 @@ const ScrollButton = () =>{
   window.addEventListener('scroll', toggleVisible);
   
   return (
-    <Button>
+    <Button className="px-5 py-5">
      <FaArrowCircleUp onClick={scrollToTop} 
      style={{display: visible ? 'inline' : 'none'}} />
     </Button>

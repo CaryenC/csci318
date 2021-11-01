@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 // react-bootstrap components
-import { Card, Container, Row, Col, Table } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import InjuryType from "components/Charts/InjuryType";
+import RoadDeaths from "components/Charts/RoadDeaths";
 import Seatbelt from "components/Tables/Seatbelt";
-import DynamicData from "components/Dynamic/DynamicData/DynamicData";
+import DynamicData from "components/DynamicData/DynamicData";
 
 function Cards() {
   return (
@@ -24,15 +25,23 @@ function Cards() {
                 <DynamicData />
               </Col>
             </Row>
+            {/* third graph here */}
+            <Row>
+              <Col>
+                <RoadDeaths />
+              </Col>
+            </Row>
             <Row>
               {/* map one here */}
+              
               <Col md={6}>
                 <Card className="p-3 mb-5">
                   <Card.Body>
-                    <Card.Title>Number of Hospitals in Japan</Card.Title>
+                    <Card.Title>Number of Hospitals in Malaysia</Card.Title>
+                    <hr/>
                     <Card.Text>
                       <iframe
-                        src="https://www.google.com/maps/d/u/0/embed?mid=19cvjSCewbht-4ixLv4ZHUT8DyaUq4zUE"
+                        src="https://www.google.com/maps/d/u/0/embed?mid=1hzq26yfrv9kKn0yNpShAzvfkG4gJQymk"
                         display="block"
                         width="100%"
                         height="400"
@@ -50,10 +59,11 @@ function Cards() {
               <Col md={6}>
                 <Card className="p-3 mb-5">
                   <Card.Body>
-                    <Card.Title>Number of Hospitals in Malaysia</Card.Title>
+                    <Card.Title>Number of Hospitals in Japan</Card.Title>
+                    <hr/>
                     <Card.Text>
                       <iframe
-                        src="https://www.google.com/maps/d/u/0/embed?mid=1hzq26yfrv9kKn0yNpShAzvfkG4gJQymk"
+                        src="https://www.google.com/maps/d/u/0/embed?mid=19cvjSCewbht-4ixLv4ZHUT8DyaUq4zUE"
                         display="block"
                         width="100%"
                         height="400"

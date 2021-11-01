@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { NavbarBrand, Navbar, Nav, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import appLogo from "../../images/applogo/whitebg.png";
+import appLogo from "../../images/applogo/full.png";
 
 function TopBar() {
   return (
@@ -11,11 +11,12 @@ function TopBar() {
       <Navbar bg="light shadow" variant="light" expand="lg" sticky="top">
         <Container>
           <NavbarBrand className="pt-0">
+            <a href="http://localhost:3000/">
             <img
               src={appLogo}
-              width="50"
               height="50"
-            />
+              href="http://localhost:3000/"
+            /></a>
             </NavbarBrand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -23,17 +24,17 @@ function TopBar() {
               <LinkContainer to="/">
                 <Nav.Link>Insights</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/info-one">
-                <Nav.Link>Info One</Nav.Link>
+              <LinkContainer to="/road-safety-campaign">
+                <Nav.Link>Road Safety Campaign</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/info-two">
-                <Nav.Link>Info Two</Nav.Link>
+              <LinkContainer to="/road-safety-plan-2021-2030">
+                <Nav.Link>Road Safety Plan (2021 - 2030)</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/info-three">
-                <Nav.Link>Info Three</Nav.Link>
+              <LinkContainer to="/messages-for-the-victims">
+                <Nav.Link>Messages For the Victims</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/info-four">
-                <Nav.Link>Info Four</Nav.Link>
+              <LinkContainer to="/news">
+                <Nav.Link>News</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/about">
                 <Nav.Link>About</Nav.Link>

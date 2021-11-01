@@ -2,9 +2,10 @@ import React from "react";
 import { Container, Col, Figure, Row } from "react-bootstrap";
 import img1 from "../images/pictures/motorbikes.jpg";
 import img2 from "../images/pictures/antonio.jpg";
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 function InfoThree() {
-<<<<<<< HEAD
+
     return (
         <>
 
@@ -44,7 +45,7 @@ function InfoThree() {
 
     </>
     )
-=======
+
   return (
     <Container className="pt-3">
       <Figure>
@@ -122,13 +123,13 @@ function InfoThree() {
           <li>
             Nations, U., 2021. World Day of Remembrance for Road Traffic Victims |
             Messages | United Nations. [online] United Nations. Available at:
-            https://www.un.org/en/observances/road-traffic-victims-day/messages    
+            https://www.un.org/en/observances/road-traffic-victims-day/messages
           </li>
         </ol>
       </div>
     </Container>
   );
->>>>>>> 4a72f845cb145fd4434b96cc1fd9345eea645b78
+
 }
 
 export default InfoThree;

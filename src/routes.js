@@ -22,10 +22,10 @@ function routes() {
     <nav>
     <Switch>
     <Route exact path="/" component={Insights}></Route>
-    <Route exact path="/info-one" component={InfoOne}></Route>
-    <Route exact path="/info-two" component={InfoTwo}></Route>
-    <Route exact path="/info-three" component={InfoThree}></Route>
-    <Route exact path="/info-four" component={InfoFour}></Route>
+    <Route exact path="/road-safety-campaign" component={InfoOne}></Route>
+    <Route exact path="/road-safety-plan-2021-2030" component={InfoTwo}></Route>
+    <Route exact path="/messages-for-the-victims" component={InfoThree}></Route>
+    <Route exact path="/news" component={InfoFour}></Route>
     <Route exact path="/about" component={About}></Route>
     <Route path="*">
     <NotFound />

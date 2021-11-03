@@ -11,11 +11,11 @@ function TopBar() {
       <Navbar bg="light shadow" variant="light" expand="lg" sticky="top">
         <Container>
           <NavbarBrand className="pt-0">
-            <a href="http://localhost:3000/">
+            <a href="/">
             <img
               src={appLogo}
               height="50"
-              href="http://localhost:3000/"
+              href="/"
             /></a>
             </NavbarBrand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

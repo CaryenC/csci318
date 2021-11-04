@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Alert, Badge, Col, Card, Row } from "react-bootstrap";
+import { Badge, Col, Card, Row } from "react-bootstrap";
 import { Bar } from "react-chartjs-2";
 
 const DynamicData = () => {
@@ -7,7 +7,7 @@ const DynamicData = () => {
   const errorMalaysiaData =
     "Sorry, unable to fetch Malaysia's data from the service.";
   const errorJapanData =
-    "Sorry, unable to fetch Malaysia's data from the service.";
+    "Sorry, unable to fetch Japan's data from the service.";
 
   const URLmy = `https://api.worldbank.org/v2/country/my/indicator/SH.STA.TRAF.P5?date2010:2019&format=json`;
   const URLjp = `https://api.worldbank.org/v2/country/jp/indicator/SH.STA.TRAF.P5?date2010:2019&format=json`;
@@ -63,8 +63,8 @@ const DynamicData = () => {
 
   const option = {
     responsive: true,
-    maintainAspectRatio : false
-  }
+    maintainAspectRatio: false,
+  };
 
   useEffect(() => {
     fetch(URLmy)
@@ -140,10 +140,13 @@ const DynamicData = () => {
   return (
     <div>
       <Card className="p-3 mb-5">
-        <Card.Title as="h2"><span style={{ color: "red", fontSize: "16px", fontWeight: "800" }}>
+        <Card.Title as="h2">
+          <span style={{ color: "red", fontSize: "16px", fontWeight: "800" }}>
             LIVE &nbsp;
-          </span>Mortality Caused by Road Traffic Injury</Card.Title>
-          <hr/>
+          </span>
+          Mortality Caused by Road Traffic Injury
+        </Card.Title>
+        <hr />
         <Row>
           <Col sm>
             <br></br>
@@ -155,8 +158,8 @@ const DynamicData = () => {
           </Col>
         </Row>
         {!dynamicData && <Badge bg="danger">{errorText}</Badge>}
-        <div style={{ height:"400px"}}>
-        {dynamicData && <Bar data={dynamicData} options={option} />}
+        <div style={{ height: "400px" }}>
+          {dynamicData && <Bar data={dynamicData} options={option} />}
         </div>
       </Card>
     </div>

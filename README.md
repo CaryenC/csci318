@@ -31,7 +31,7 @@ Road Wise is a web application for visualizing data about road traffic accidents
 
    This clones the repo.
 
-2. ```cd``` into the new folder and type
+2. ```cd csci318``` and type
 
    ```bash
    $ npm install
